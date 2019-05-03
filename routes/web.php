@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('employee','EmployeeController@create')->name('employee.create');
+Route::post('employee','EmployeeController@store')->name('employee.store');
