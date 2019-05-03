@@ -14,5 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('employee','EmployeeController@create')->name('employee.create');
-Route::post('employee','EmployeeController@store')->name('employee.store');
+// Route::get('employee-index','EmployeeController@index')->name('employee.index');
+// Route::get('employee','EmployeeController@create')->name('employee.create');
+// Route::post('employee','EmployeeController@store')->name('employee.store');
+Route::resource('employee','EmployeeController');
+Route::resource('transaction','TransactionController');
+Route::get('show-against-employee/{id}','TransactionController@showAgainstEmployee')->name('transaction.showAgainstEmployee');

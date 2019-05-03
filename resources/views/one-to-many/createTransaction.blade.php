@@ -5,20 +5,20 @@
 				Add Employee Details
 			</div>
 			<div class="panel-body">
-				<form method="post" action="{{ route('employee.store')}}">
+				<form method="post" action="{{ route('transaction.store')}}">
 					{{csrf_field()}}
 					<div class="form-group">
 						<label class="col-md-4">
-							Employee Name	
+							Employee Id	
 						</label>
-						<input type="text" class="form-control"  name="employee_name"/>
+						<input type="text" class="form-control"  name="employee_id"/>
 					</div>
 
 					<div class="form-group">
 						<label class="col-md-4">
-							Employee Salary	
+							Transaction Amount	
 						</label>
-						<input type="text" class="form-control"  name="amount"/>
+						<input type="text" class="form-control"  name="transaction_amount"/>
 					</div>
 
 					<div class="form-group">
