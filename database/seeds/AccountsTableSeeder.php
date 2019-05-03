@@ -18,7 +18,8 @@ class AccountsTableSeeder extends Seeder
     	{
     		Account::create([
     			'user_id' => $index,
-    			 'account_number'=> rand(100000000,999999999),
+    			'account_number'=> rand(100000000,999999999),
+    			'parent_id' => $index,
     		]);
     	}
     }

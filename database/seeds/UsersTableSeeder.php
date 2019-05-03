@@ -20,6 +20,8 @@ class UsersTableSeeder extends Seeder
     			'name' => $faker->userName,
     			'email' => $faker->email,
     			'password' => bcrypt('secret'),
+    			'p_id'=> $index,
+    			'p_name'=>$faker->streetName,
     			// $table->bigIncrements('id');
             // $table->string('name');
             // $table->string('email')->unique();

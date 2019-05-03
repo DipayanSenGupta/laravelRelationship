@@ -38,7 +38,7 @@ class User extends Authenticatable
     ];
 
     public function account() {
-        return $this->hasOne('App\Account');
+        return $this->hasOne('App\Account','parent_id','p_id');
     }
 
 }
