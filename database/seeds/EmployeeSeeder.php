@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Transaction;
-class TransactionSeeder extends Seeder
+use App\Employee;
+
+class EmployeeSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,14 +12,14 @@ class TransactionSeeder extends Seeder
      */
     public function run()
     {
-		DB::table('transactions')->truncate();
+		DB::table('employees')->truncate();
 		$faker = \Faker\Factory::create();
 		foreach(range(1,50) as $index)
 		{
-		Transaction::create([
-		'employee_id' => $index,
-		'spouse_foreign_id'=>$index,
-		'transaction_amount'=> rand(10,1000),
+		Employee::create([
+		'employee_name'=>$faker->name,	
+		'spouse_local_id'=>$index,
+		'amount'=> rand(10,1000),
 		]);
 		}
     }

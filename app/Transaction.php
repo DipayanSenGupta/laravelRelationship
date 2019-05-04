@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Transaction extends Model
 {
 	public function employee() {
-		return $this->belongsTo('App\Employee');
+		// return $this->belongsTo('App\Employee','spouse_local_id','spouse_foreign_id');
+		return $this->belongsTo('App\Employee','spouse_foreign_id','spouse_local_id');
+
 	}
 }
